@@ -1,5 +1,14 @@
 function findShortestStringRecursive(arr) {
-  // type your code here
+  // if length of array is 1, return first and the only one element
+  if (arr.length === 1) {
+    return arr[0];
+  }
+
+  // store calling recursive function in a variable
+  let result = findShortestStringRecursive(arr.slice(1));
+
+  // if the current element shorter than any other, return that element, if no - return recursive function
+  return arr[0].length <= result.length? arr[0] : result;
 }
 
 if (require.main === module) {
