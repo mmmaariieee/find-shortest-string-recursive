@@ -7,7 +7,7 @@ function findShortestStringRecursive(arr) {
   // store calling recursive function in a variable
   let result = findShortestStringRecursive(arr.slice(1));
 
-  // if the current element shorter than any other, return that element, if no - return recursive function
+  // if the current element is shorter than any other, return that element, if no - return recursive function
   return arr[0].length <= result.length? arr[0] : result;
 }
 
